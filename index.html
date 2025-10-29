@@ -2,11 +2,76 @@
 <html lang="hr">
 <head>
     <meta charset="UTF-8"/>
-    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web development exercise</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#" class="navbar-brand">WebDev</a>
+        <button class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <ul class="navbar-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about-us">About us</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sections -->
+    <section id="home">
+        <h3>Front page</h3>
+        <p>Dobrodošli na moju stranicu!</p>
+    </section>
+
+    <section id="about-us">
+        <h3>Form</h3>
+        <form>
+            <input type="text" placeholder="Ime" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Poruka"></textarea>
+            <button type="submit">Pošalji</button>
+        </form>
+    </section>
+
+    <section id="portfolio">
+        <h3>Slider</h3>
+        <div class="slider">
+            <div class="slide">Slika 1</div>
+            <div class="slide">Slika 2</div>
+            <div class="slide">Slika 3</div>
+        </div>
+    </section>
+
+    <section id="product-card">
+        <h3>Product card</h3>
+        <div class="products">
+            <div class="card">
+                <h4>Proizvod 1</h4>
+                <p>Cijena: 100kn</p>
+                <button>Kupi</button>
+            </div>
+            <div class="card">
+                <h4>Proizvod 2</h4>
+                <p>Cijena: 150kn</p>
+                <button>Kupi</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>This website is for practice only!</p>
+        <p>Copyright ©2025, Designed by LeaR</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

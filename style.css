@@ -1,5 +1,145 @@
+/* Global */
 body {
-  font-family: sans-serif;
-  background-color: #f2f2f2;
-  text-align: center;
+    font-family: sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: whitesmoke;
+    padding: 15px 40px;
+    position: relative;
+}
+
+.navbar-brand {
+    color: #00bcd4;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbar-links li a:hover {
+    color: #00bcd4;
+}
+
+/* Hamburger button */
+.hamburger {
+    display: none; /* Sakriven na desktopu */
+    font-size: 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Sections */
+section {
+    padding: 40px 20px;
+}
+
+/* Form */
+form input, form textarea, form button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 200px;
+}
+
+/* Slider */
+.slider {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.slide {
+    width: 100px;
+    height: 100px;
+    background-color: #00bcd4;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Product cards */
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    /* Pokaži hamburger */
+    .hamburger {
+        display: block;
+    }
+
+    /* Sakrij linkove po defaultu */
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        background-color: #222222;
+        position: absolute;
+        top: 60px;
+        right: 40px;
+        padding: 10px;
+        border-radius: 5px;
+        width: 150px;
+        text-align: right;
+    }
+
+    .navbar-links li a {
+        color: #fff;
+        margin: 10px 0;
+    }
+
+    /* Prikaz linkova kada je active */
+    .navbar-links.active {
+        display: flex;
+    }
+
+    /* Slider i proizvodi na mobilnom */
+    .products {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .slider {
+        flex-direction: column;
+    }
 }
