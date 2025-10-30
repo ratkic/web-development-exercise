@@ -327,3 +327,33 @@ footer {
     }
 
 }
+
+
+/* about us page */
+/* Stilizacija headera za About us */
+.header {
+    width: 100%;               /* Header zauzima cijelu širinu stranice */
+    text-align: left;          /* Naslov poravnat uz lijevi rub */
+    padding: 20px 40px;        /* Razmak oko naslova, gornji/donji 20px, lijevi/desni 40px */
+    box-sizing: border-box;    /* Padding se uračunava u ukupnu širinu */
+    background-color: white;    /* Možeš promijeniti pozadinu ako želiš */
+    border-bottom: 2px solid #ff6600; /* Linija ispod naslova za vizualni naglasak */
+}
+
+.header h3 {
+    margin: 0;                 /* Uklanja defaultni margin h3 */
+    font-size: 2rem;           /* Velik naslov */
+    font-weight: bold;         /* Naglasak */
+    color: #ff6600;            /* Boja u skladu s tvojim brandom */
+}
+
+/* Responzivno za mobilne uređaje */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 20px;    /* Smanjivanje paddinga na manjim ekranima */
+    }
+
+    .header h3 {
+        font-size: 1.5rem;     /* Naslov manji za mobilne uređaje */
+    }
+}
