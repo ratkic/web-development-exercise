@@ -281,10 +281,49 @@ footer {
     }
 
     /* Slider i proizvodi na mobilnom */
-    .products {
-        flex-direction: column;
-        gap: 20px;
+    #slider {
+        max-width: 100%;
+        margin: 20px auto;
     }
 
+    #slider h3 {
+        font-size: 1.5rem;
+        margin-left: 15px;
+        text-align: left;
+    }
+
+    .slider-container {
+        display: flex;
+        gap: 10px;
+        justify-content: flex-start; /* umjesto center */
+        transition: transform 0.5s ease;
+    }
+
+
+    .slide {
+        flex: 0 0 80%; /* 80% width da bude veliki slajd */
+        margin: 0 5px;
+        opacity: 0.5; 
+        transition: transform 0.5s, opacity 0.5s;
+    }
+
+
+    .slide img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .prev, .next {
+        font-size: 1.5rem;
+        padding: 6px 10px;
+        top: 45%;
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+    .slide.active{
+        transform: scale(1.05);
+        opacity: 1;
+    }
 
 }

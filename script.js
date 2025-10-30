@@ -18,10 +18,15 @@ function updateCarousel() {
   slides.forEach((slide, index) => slide.classList.remove('active'));
   slides[currentIndex].classList.add('active');
 
-  const slideWidth = slides[0].clientWidth + 20; // 20px margin
-  const offset = currentIndex * slideWidth - (container.clientWidth - slideWidth)/2;
+  const slideStyle = getComputedStyle(slides[0]);
+  const slideWidth = slides[0].offsetWidth + parseInt(slideStyle.marginLeft) + parseInt(slideStyle.marginRight);
+  const containerWidth = container.offsetWidth;
+
+  // centriranje aktivnog slajda
+  const offset = currentIndex * slideWidth - (containerWidth - slideWidth) / 2;
   container.style.transform = `translateX(${-offset}px)`;
 }
+
 
 prev.addEventListener('click', () => {
   currentIndex--;
@@ -36,5 +41,32 @@ next.addEventListener('click', () => {
 });
 
 updateCarousel();
+
+//touch events za listanje slika
+let startX = 0;
+let endX = 0;
+
+container.addEventListener('touchstart', (e) => {
+  startX = e.touches[0].clientX;
+});
+
+container.addEventListener('touchmove', (e) => {
+  endX = e.touches[0].clientX;
+});
+
+container.addEventListener('touchend', () => {
+  let diff = startX - endX;
+  if (diff > 50) {
+    // swipe lijevo → sljedeći slide
+    currentIndex++;
+    if(currentIndex >= slides.length) currentIndex = slides.length - 1;
+    updateCarousel();
+  } else if (diff < -50) {
+    // swipe desno → prethodni slide
+    currentIndex--;
+    if(currentIndex < 0) currentIndex = 0;
+    updateCarousel();
+  }
+});
 
 
