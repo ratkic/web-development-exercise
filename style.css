@@ -61,18 +61,20 @@ body {
 }
 
 .hero-landing {
-  position: relative; /* važno */
+  position: relative; 
   width: 100%;
   height: 100%;
 }
 
 .landing-image {
   width: 100%;
-  height: auto;
-  object-fit: contain;
-  display: block;
-  position: relative;
-  /*z-index: 0;*/
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  /*display: block;*/
+  position: absolute;
+  z-index: 0;
   opacity: 0.9;
 }
 
@@ -87,6 +89,17 @@ body {
   padding: 20px 40px;
   border-radius: 10px;
   z-index: 1;
+  max-width: 90%;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;           
+  margin: 0 0 10px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
 }
 
 .additional-buttons {
@@ -94,6 +107,7 @@ body {
   justify-content: center;
   gap: 15px;
   margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 .landing-button {
@@ -169,7 +183,7 @@ footer {
     .navbar-links {
         display: none;
         flex-direction: column;
-        background-color: #222222;
+        background-color: #ff6600;
         position: absolute;
         top: 60px;
         right: 40px;
@@ -177,6 +191,7 @@ footer {
         border-radius: 5px;
         width: 150px;
         text-align: right;
+        z-index: 10;
     }
 
     .navbar-links li a {
@@ -187,6 +202,38 @@ footer {
     /* Prikaz linkova kada je active */
     .navbar-links.active {
         display: flex;
+    }
+
+    .navbar-links li a:hover {
+        color: #140901;
+    }
+
+    /* Landing page */
+    .hero-content {
+        width: 70%;
+        padding: 15px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .additional-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .landing-button {
+        width: 100%;
+        padding: 12px 0;
+    }
+
+    .landing-image {
+        object-position: center top;
     }
 
     /* Slider i proizvodi na mobilnom */
