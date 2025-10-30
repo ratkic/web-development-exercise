@@ -54,75 +54,75 @@ body {
 /* Sections */
 
 .hero {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .hero-landing {
-  position: relative; 
-  width: 100%;
-  height: 100%;
+    position: relative; 
+    width: 100%;
+    height: 100%;
 }
 
 .landing-image {
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  object-fit: cover;
-  /*display: block;*/
-  position: absolute;
-  z-index: 0;
-  opacity: 0.9;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    /*display: block;*/
+    position: absolute;
+    z-index: 0;
+    opacity: 0.9;
 }
 
 .hero-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-  background-color: rgba(175, 147, 109, 0.4);
-  padding: 20px 40px;
-  border-radius: 10px;
-  z-index: 1;
-  max-width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background-color: rgba(175, 147, 109, 0.4);
+    padding: 20px 40px;
+    border-radius: 10px;
+    z-index: 1;
+    max-width: 90%;
 }
 
 .hero-content h1 {
-  font-size: 2.5rem;           
-  margin: 0 0 10px;
+    font-size: 2.5rem;           
+    margin: 0 0 10px;
 }
 
 .hero-content p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
 }
 
 .additional-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 20px;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
 }
 
 .landing-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #ff6600;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 10px;
-  transition: background-color 0.3s;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: background-color 0.3s;
 }
 
 .landing-button:hover {
-  background-color: #c73500;
+    background-color: #c73500;
 }
 
 
@@ -135,21 +135,65 @@ form input, form textarea, form button {
 }
 
 /* Slider */
-.slider {
+#slider h3 {
+    width: 100%;
+    text-align: left;
+    font-size: 2rem;
+    color: #ff6600;
+    margin-bottom: 20px;
+    font-weight: bold;
+    position: relative;
+}
+
+#slider {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    overflow: hidden; 
+}
+
+.slider-container {
     display: flex;
-    gap: 10px;
-    justify-content: center;
+    transition: transform 0.5s ease;
 }
 
 .slide {
-    width: 100px;
-    height: 100px;
-    background-color: #00bcd4;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    flex: 0 0 30%; /* širina svake slike (prilagodljiva) */
+    margin: 0 10px;
+    opacity: 0.5; /* neaktivne slike transparentne */
+    transition: transform 0.5s, opacity 0.5s;
 }
+
+.slide.active {
+    transform: scale(1.1); /* fokusirana slika je veća */
+    opacity: 1; 
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Strelice */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.prev { left: 0; }
+.next { right: 0; }
+
 
 /* Product cards */
 .products {
@@ -242,7 +286,5 @@ footer {
         gap: 20px;
     }
 
-    .slider {
-        flex-direction: column;
-    }
+
 }
