@@ -37,13 +37,4 @@ It was created purely to practice web development and experiment with modern HTM
 
 ---
 
-## How to Run
 
-1. Download or clone the repository.  
-2. Open `index.html` in your web browser.  
-3. Navigate through the pages and test the features.
-
----
-
-**Author:** Your Name  
-**Date:** 2025
