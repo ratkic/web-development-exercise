@@ -17,8 +17,8 @@ body {
     position: relative;
 }
 
-.navbar-brand {
-    color: #00bcd4;
+.navbar-logo {
+    color: #ff6600;
     font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
@@ -39,7 +39,7 @@ body {
 }
 
 .navbar-links li a:hover {
-    color: #00bcd4;
+    color: #ff6600;
 }
 
 /* Hamburger button */
@@ -52,9 +52,65 @@ body {
 }
 
 /* Sections */
-section {
-    padding: 40px 20px;
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
+
+.hero-landing {
+  position: relative; /* važno */
+  width: 100%;
+  height: 100%;
+}
+
+.landing-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  position: relative;
+  /*z-index: 0;*/
+  opacity: 0.9;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  background-color: rgba(175, 147, 109, 0.4);
+  padding: 20px 40px;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.additional-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.landing-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff6600;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+.landing-button:hover {
+  background-color: #c73500;
+}
+
 
 /* Form */
 form input, form textarea, form button {
