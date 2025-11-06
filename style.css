@@ -126,15 +126,16 @@ body {
 }
 
 
-/* Form */
-form input, form textarea, form button {
-    display: block;
-    margin: 10px auto;
-    padding: 10px;
-    width: 200px;
+/* Slider */
+#slider {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;   
+    margin: 40px auto;
+    overflow: hidden; 
+    padding: 0 20px;     
 }
 
-/* Slider */
 #slider h3 {
     width: 100%;
     text-align: left;
@@ -143,14 +144,7 @@ form input, form textarea, form button {
     margin-bottom: 20px;
     font-weight: bold;
     position: relative;
-}
-
-#slider {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
-    margin: 40px auto;
-    overflow: hidden; 
+    padding-left: 0;      
 }
 
 .slider-container {
@@ -172,9 +166,12 @@ form input, form textarea, form button {
 
 .slide img {
     width: 100%;
+    height: 400px;       
+    object-fit: cover;   
     display: block;
     border-radius: 10px;
 }
+
 
 /* Strelice */
 .prev, .next {
@@ -195,17 +192,86 @@ form input, form textarea, form button {
 .next { right: 0; }
 
 
-/* Product cards */
+/* Product cards (putovanja) */
+#travel-offers {
+    margin: 40px auto;
+    max-width: 1000px;
+    text-align: left; 
+    padding: 0 20px;  
+}
+
+#travel-offers h3 {
+    font-size: 2rem;
+    color: #ff6600;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-align: left; 
+}
+
+
 .products {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .card {
     background-color: white;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
+    width: 280px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 400px; 
+    object-fit: cover; 
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+
+.card h4 {
+    margin: 10px 0;
+    color: #333;
+}
+
+.card p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+
+/* Form */
+form input, form textarea, form button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 200px;
+}
+
+#newsletter {
+    margin: 40px auto;
+    max-width: 1000px;
+    text-align: left; 
+    padding: 0 20px;  
+}
+
+
+#newsletter h3 {
+    font-size: 2rem;
+    color: #ff6600;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-align: left; 
 }
 
 /* Footer */
@@ -295,7 +361,7 @@ footer {
     .slider-container {
         display: flex;
         gap: 10px;
-        justify-content: flex-start; /* umjesto center */
+        justify-content: flex-start; 
         transition: transform 0.5s ease;
     }
 
@@ -329,31 +395,64 @@ footer {
 }
 
 
-/* about us page */
-/* Stilizacija headera za About us */
+/* ==== about us page ==== */
 .header {
-    width: 100%;               /* Header zauzima cijelu širinu stranice */
-    text-align: left;          /* Naslov poravnat uz lijevi rub */
-    padding: 20px 40px;        /* Razmak oko naslova, gornji/donji 20px, lijevi/desni 40px */
-    box-sizing: border-box;    /* Padding se uračunava u ukupnu širinu */
-    background-color: white;    /* Možeš promijeniti pozadinu ako želiš */
-    border-bottom: 2px solid #ff6600; /* Linija ispod naslova za vizualni naglasak */
+    width: 100%;               
+    text-align: left;          
+    padding: 20px 40px;        
+    box-sizing: border-box;    
+    background-color: white;    
+    border-bottom: 2px solid #ff6600; 
 }
 
 .header h3 {
-    margin: 0;                 /* Uklanja defaultni margin h3 */
-    font-size: 2rem;           /* Velik naslov */
-    font-weight: bold;         /* Naglasak */
-    color: #ff6600;            /* Boja u skladu s tvojim brandom */
+    margin: 0;                 
+    font-size: 2rem;           
+    font-weight: bold;         
+    color: #ff6600;            
 }
 
 /* Responzivno za mobilne uređaje */
 @media (max-width: 768px) {
     .header {
-        padding: 15px 20px;    /* Smanjivanje paddinga na manjim ekranima */
+        padding: 15px 20px;   
     }
 
     .header h3 {
-        font-size: 1.5rem;     /* Naslov manji za mobilne uređaje */
+        font-size: 1.5rem;    
     }
 }
+
+
+/* ===== Stilovi za travel.html ===== */
+
+.product-detail {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+    margin: 40px auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.product-detail img {
+    width: 60%;
+    max-width: 600px;
+    height: 600px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.product-detail h4 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.product-detail p {
+    color: #555;
+    max-width: 600px;
+    margin: 10px auto;
+    line-height: 1.6;
+}
+

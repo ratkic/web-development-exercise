@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Travel details</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -20,15 +20,25 @@
         <ul class="navbar-links" id="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About us</a></li>
-            <li><a href="about.html">Portfolio</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
     <header class="header">
-        <h3>Portfolio</h3>
+        <h3 id="travel-header"></h3>
     </header>
 
+    <section id="details" class="product-detail">
+        <img id="travel-img" src="" alt="Travel">
+        <h4 id="travel-description"></h4>
+        <p id="travel-text"></p>
+        <p><strong id="travel-price"></strong></p>
+        <a href="index.html" class="landing-button">Back to offers</a>
+        <button class="landing-button">Book</button>
+    </section>
+
     <script src="script.js"></script>
+    <script src="travels.js"></script>
 </body>
 </html>

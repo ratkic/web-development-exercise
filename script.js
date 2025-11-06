@@ -68,5 +68,3 @@ container.addEventListener('touchend', () => {
     updateCarousel();
   }
 });
-
-
