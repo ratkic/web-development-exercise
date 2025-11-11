@@ -251,15 +251,8 @@ body {
 
 
 /* Form */
-form input, form textarea, form button {
-    display: block;
-    margin: 10px auto;
-    padding: 10px;
-    width: 200px;
-}
-
 #newsletter {
-    margin: 40px auto;
+    margin: 60px auto;
     max-width: 1000px;
     text-align: left; 
     padding: 0 20px;  
@@ -272,6 +265,79 @@ form input, form textarea, form button {
     margin-bottom: 30px;
     font-weight: bold;
     text-align: left; 
+}
+
+.newsletter-form p {
+    font-size: 1.1rem; 
+    font-weight: 500;   
+    color: #333;                 
+    line-height: 1.4;             
+}
+
+.newsletter-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: stretch;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 30px;
+}
+
+.newsletter-form {
+    flex: 1;
+    justify-content: center;     
+    align-items: center;   
+    margin-top: 45px;
+}
+
+.newsletter-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%; 
+    font-size: 1rem;
+}
+
+.newsletter-form input[type="email"] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.newsletter-form input[type="email"],
+.newsletter-form button {
+    width: 100%;       
+    box-sizing: border-box; 
+    font-size: 1rem;
+}
+
+
+.newsletter-form button {
+    padding: 12px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.newsletter-form button:hover {
+    background-color: #c73500;
+}
+
+/*mapa*/
+.newsletter-map {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 300px;
 }
 
 /* Footer */
@@ -434,6 +500,20 @@ footer {
         padding: 12px 0;
         display: block;
         text-align: center;
+    }
+
+    /*newsletter*/
+    .newsletter-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .newsletter-form {
+        margin-top: 5px;
+    }
+
+    .newsletter-map {
+        height: 250px;
     }
 
 }
