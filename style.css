@@ -392,6 +392,50 @@ footer {
         opacity: 1;
     }
 
+    /*product cards*/
+    #travel-offers h3 {
+        font-size: 1.5rem;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    .products {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .card {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;
+        max-height: 350px;
+    }
+
+    .card h4 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .card p {
+        font-size: 1rem;
+        margin-bottom: 12px;
+        text-align: center;
+    }
+
+    .card .landing-button {
+        width: 100%;
+        font-size: 1rem;
+        padding: 12px 0;
+        display: block;
+        text-align: center;
+    }
+
 }
 
 
@@ -454,5 +498,60 @@ footer {
     max-width: 600px;
     margin: 10px auto;
     line-height: 1.6;
+}
+
+
+/* ==== RESPONSIVE TRAVEL PAGE ==== */
+@media (max-width: 768px) {
+    .product-detail {
+        padding: 20px 10px;
+        margin: 20px auto;
+        max-width: 95%;
+    }
+
+    .product-detail img {
+        width: 100%;
+        height: auto;
+        max-height: 400px;
+    }
+
+    .product-detail h4 {
+        font-size: 1.3rem;
+        margin-bottom: 8px;
+    }
+
+    .product-detail p {
+        font-size: 1rem;
+        padding: 0 10px;
+        line-height: 1.5;
+    }
+
+    .landing-button {
+        display: block;
+        width: 100%;
+        margin: 10px auto;
+        font-size: 1rem;
+        padding: 12px 0;
+    }
+}
+
+/* Još manji ekrani  */
+@media (max-width: 480px) {
+    .product-detail {
+        padding: 15px 8px;
+    }
+
+    .product-detail h4 {
+        font-size: 1.1rem;
+    }
+
+    .product-detail p {
+        font-size: 0.95rem;
+    }
+
+    .landing-button {
+        font-size: 0.9rem;
+        padding: 10px 0;
+    }
 }
 
